@@ -1,0 +1,11 @@
+2026-02-19 10:04:48 INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcher'
+2026-02-19 10:04:50 INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1378 ms
+2026-02-19 10:04:56 WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /SpringSecurityRegistration/
+2026-02-19 10:04:56 WARN  org.springframework.web.servlet.PageNotFound - No endpoint GET /SpringSecurityRegistration/.
+2026-02-19 10:05:01 INFO  org.mind.controller.HomeController - Application loaded , logger implementation successfully 
+2026-02-19 10:06:18 INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcher'
+2026-02-19 10:06:19 INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1540 ms
+2026-02-19 10:06:37 INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcher'
+2026-02-19 10:06:39 INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1392 ms
+2026-02-19 10:06:47 INFO  org.mind.controller.HomeController - Application loaded , logger implementation successfully 
+2026-02-19 10:07:07 INFO  org.mind.controller.HomeController - Registration Successful

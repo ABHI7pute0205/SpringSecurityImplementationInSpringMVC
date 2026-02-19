@@ -1,0 +1,40 @@
+
+
+	yat directly code run kelya natar 404 error yeto ye so to yeto means he spring MVC + security properly
+	intergrate nahi hot so aapn jo HomeControlle madhe URL write kela ye to 'register' to directly open
+	kara y cha Browser URL Address bar madhe
+	   
+	initially asa asto --> http://localhost:7000/SpringSecurityRegistration  - ya la error yeto 404 mang 
+	this one  -->  http://localhost:7000/SpringSecurityRegistration/register
+	
+	@Configuration
+	public class SecurityConfig {
+
+    @Bean 
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+}
+
+	this is the PasswordEncoder class using this we can Encrypte password and Decrypte password this class 
+	is same in both  spring MVC + Boot  we have method 
+-->  String encrypted = passwordEncoder.encode(user.getPassword());
+		user.setPassword(encrypted);
+		
+		to encrypte user password menas ya cha use kela k auser cha password DB madhde store hota na 
+		$2a$10$Vd7D.sDKSb7lWmx1vQpErOGo2l/l4Y7Er841g0.lwoGnbW8Kj0cRu   hya format madhe store hoto 
+		which provide a security to us 
+		
+main methods of the PasswordEncoder class : 
+1. encode(CharSecuence password) --> Store password in encrypted format plane password store hot nahi and 
+		disAdvan--> encrypted password long asto
+		
+2. matches(CharSequence rawPassword, String encodedPassword) : Login veles check karto password correct 
+		aahe ka.
+
+Mostly used EncoderClasses : 
+	1. BCryptPasswordEncoder  --> storng hashing 
+	2. Pbkdf2PasswordEncoder  --> High Security hasing used in banking / security app
+	3. SCryptPasswordEncoder  --> Advanced HAsing 
+______________________________________________________________________________________________________	
+
