@@ -1,26 +1,20 @@
-<%-- Success / Fail Message Display 
-<% if(request.getAttribute("msg") != null){ %>
-    <h3 style="color:green;">
-        <%= request.getAttribute("msg") %>
-    </h3>
-<% } %>
---%>
+
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Register Page</title>
+<title>Login Page</title>
 
 <style>
 body {
     font-family: Arial;
-    background:#f2f2f2;
+    background:#e6f2ff;
 }
 
 .container {
-    width:350px;
-    margin:80px auto;
+    width:320px;
+    margin:100px auto;
     background:white;
     padding:25px;
     border-radius:8px;
@@ -34,7 +28,7 @@ h2 {
 input {
     width:100%;
     padding:8px;
-    margin:8px 0;
+    margin:10px 0;
     border:1px solid #ccc;
     border-radius:4px;
 }
@@ -42,7 +36,7 @@ input {
 button {
     width:100%;
     padding:10px;
-    background:#28a745;
+    background:#007bff;
     border:none;
     color:white;
     font-size:16px;
@@ -50,7 +44,7 @@ button {
 }
 
 button:hover {
-    background:#218838;
+    background:#0056b3;
 }
 
 a {
@@ -62,33 +56,26 @@ a {
 <body>
 
 <div class="container">
-<h2>User Registration</h2>
+<h2>User Login</h2>
 
-<form action="${pageContext.request.contextPath}/registerUser" method="post">
+<form action="${pageContext.request.contextPath}/login" method="post">
     Username:
     <input type="text" name="username" required>
 
     Password:
     <input type="password" name="password" required>
 
-    Email:
-    <input type="email" name="email">
+    <button type="submit">Login</button>
+</form>
 
-    Contact:
-    <input type="text" name="contact">
-
-    <button type="submit">Register</button>
+<br>
 <center>
-Already user ? <a href="log">Login here</a>
+New user ? <a href="register">Register here</a>
 <h3 style="color:red; text-align:center;">
     ${msg}
 </h3>
 
 </center>
-    
-</form>
-
-<br>
 
 </div>
 

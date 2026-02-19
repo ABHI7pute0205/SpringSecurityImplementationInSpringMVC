@@ -38,3 +38,24 @@ Mostly used EncoderClasses :
 	3. SCryptPasswordEncoder  --> Advanced HAsing 
 ______________________________________________________________________________________________________	
 
+	yat aata password encrypte karun login kara y ch ye user la and dashboard chya page var ti redirect
+	kara y ch ye BUT yat spring security madhe password encrypte kelya natar decrypte kar ta yet nahi 
+	fakt match kar ta yeto Password always remember ch thevha lag to 
+	
+	
+	LOGIN USER AND CHECK ENCODED PASSWORD
+	
+	@Override
+	public User loginUser(String username, String password) {
+		
+		User user = userRepo.findByUsername(username); 
+		
+		// matches method cha use karun user UI var ti input field madhe jo passwrod enter kar to 
+		// to match method ne DB madhlya encrypted password sobat compaire houn login la allow karto
+		
+		if(user != null && passwordEncoder.matches(password, user.getPassword())) {
+			return user;
+		}
+		
+		return null;
+	}
